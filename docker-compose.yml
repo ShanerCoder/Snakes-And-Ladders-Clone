@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: .docker/Dockerfile
     ports:
-      - 5555:80
+      - 5556:80
     volumes:
       - ./:/srv/app
       - /srv/app/vendor
@@ -16,17 +16,17 @@ services:
     depends_on:
       - db
     ports:
-      - 8888:80
+      - 8887:80
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     depends_on:
       - db
-    container_name: phpmyadmin
+    container_name: phpmyadminB00768327
     environment:
       - PMA_ARBITRARY=1
     restart: always
     ports:
-      - 8889:80
+      - 8886:80
     volumes:
       - /sessions
   db:
